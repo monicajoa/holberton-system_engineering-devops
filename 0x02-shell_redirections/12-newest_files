@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -daystart -type f -print | head
+ls -t | head
