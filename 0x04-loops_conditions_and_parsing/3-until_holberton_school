@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This bash script displays Holberton School 10 times, using the using the until loop
+string="Holberton School"
+i=0
+until [ "$i" -gt 9 ]
+	do
+		echo "$string"
+		i=$(( i+1 ))
+	done
