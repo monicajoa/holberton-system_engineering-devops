@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # This bash script that displays numbers from 1 to 20, bad luck from China(4th), bad luck from Japan(9th), bad luck from Italy(17th)
 str1="bad luck from China"
-str2="bad luck from Japon"
-str3="bad luck from Italia"
+str2="bad luck from Japan"
+str3="bad luck from Italy"
 i=1
 while [ "$i" -le 20 ]
 	do
