@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This bash script that loops from 1 to 10 , bad luck(4th), good luck(8th), Holberton School (other iterations)
+string="Holberton School"
+str1="bad luck"
+str2="good luck"
+i=1
+while [ "$i" -le 10 ]
+	do
+		if [ "$i" -eq 4 ]
+		then
+			echo "$str1"
+		elif [ "$i" -eq 8 ]
+		then
+			echo "$str2"
+		else
+			echo "$string"
+		fi
+		let "i += 1"
+	done
