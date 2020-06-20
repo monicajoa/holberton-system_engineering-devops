@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This bash script displays Holberton School 10 times, in the 9th iteration say Hi.
+string="Holberton School"
+str2="Hi"
+i=0
+while [ "$i" -lt 10 ]
+	do
+		echo "$string"
+		if [ "$i" -eq 8 ]
+		then
+			echo "$str2"
+		fi
+		let "i += 1"
+	done
