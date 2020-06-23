@@ -11,13 +11,13 @@ case "$1" in
 
 	stop)
 		echo "manage_my_process stopped"
-		pkill -f ./manage_my_process
+		pkill --signal 9 -f ./manage_my_process
 		rm "$PID_file"
 		exit
 		;;
 
 	restart)
-		pkill -f ./manage_my_process
+		pkill --signal 9 -f ./manage_my_process
 		rm "$PID_file"
 		./manage_my_process &
 		echo "$$" > "$PID_file"
@@ -30,5 +30,3 @@ case "$1" in
 		;;
 
 	esac
-	exit
-	;;
