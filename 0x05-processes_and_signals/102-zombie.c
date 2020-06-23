@@ -29,7 +29,7 @@ int main(void)
 	while (i < 5)
 	{
 		child_pid = fork();
-		if (child_pid != 0)
+		if (child_pid == 0)
 		{
 			return (0);
 		}
