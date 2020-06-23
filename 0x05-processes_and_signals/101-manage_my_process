@@ -4,7 +4,7 @@ PID_file=/var/run/my_process.pid
 case "$1" in
 	start)
 		./manage_my_process &
-		echo "$$" > "$PID_file"
+		echo "$!" > "$PID_file"
 		echo "manage_my_process started"
 		exit
 		;;
@@ -20,7 +20,7 @@ case "$1" in
 		pkill --signal 9 -f ./manage_my_process
 		rm "$PID_file"
 		./manage_my_process &
-		echo "$$" > "$PID_file"
+		echo "$!" > "$PID_file"
 		echo "manage_my_process restarted"
 		exit
 		;;
