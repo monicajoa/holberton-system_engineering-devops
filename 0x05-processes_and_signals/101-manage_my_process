@@ -6,14 +6,12 @@ case "$1" in
 		./manage_my_process &
 		echo "$!" > "$PID_file"
 		echo "manage_my_process started"
-		exit
 		;;
 
 	stop)
 		echo "manage_my_process stopped"
 		pkill --signal 9 -f ./manage_my_process
 		rm "$PID_file"
-		exit
 		;;
 
 	restart)
@@ -22,7 +20,6 @@ case "$1" in
 		./manage_my_process &
 		echo "$!" > "$PID_file"
 		echo "manage_my_process restarted"
-		exit
 		;;
 
 	*)
