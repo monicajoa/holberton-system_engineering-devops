@@ -24,7 +24,7 @@ int main(void)
 {
 	pid_t child_pid;
 	unsigned int i = 0;
-	int wait_status = 0;
+
 	i = 0;
 	while (i < 5)
 	{
