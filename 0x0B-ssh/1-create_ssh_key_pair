@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+# Create an SSH key pair
+# Bash script that creates an RSA key pair
+# -f - "Filename" Specifies the file name of the key
+# -b // “Bits” Specifies the number of bits in the key to create
+# -N //"New passphrase" Provides the new passphrase for the key
+ssh-keygen -f holberton -b 4096 -N betty
