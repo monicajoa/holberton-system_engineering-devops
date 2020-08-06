@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Web stack debugging #0 - Give me a page
+
+service apache2 start
