@@ -13,7 +13,7 @@ file { 'index':
 
 file_line { '301 Moved Permanently':
   path  => '/etc/nginx/sites-available/default',
-  line  => '\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
+  line  => '\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}',
   after => '^server {'
 }
 
