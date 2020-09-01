@@ -1,12 +1,11 @@
 # Install Nginx web server (w/ Puppet)
-
-package {'nginx':
+package { 'nginx':
   ensure   => 'latest',
   name     => 'nginx',
   provider => 'apt'
 }
 
-file {'index':
+file { 'index':
   path    => '/var/www/html/index.nginx-debian.html',
   mode    => '0644',
   content => 'Holberton School'
