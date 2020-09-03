@@ -3,21 +3,21 @@
 # creating a custom HTTP header response, but with Puppet
 
 exec { 'update':
-  command => 'sudo apt-get update',
+  command  => '/usr/bin/sudo apt-get update',
 }
 
 package { 'nginx':
-  ensure  => 'installed',
-  name    => 'nginx',
+  ensure   => 'installed',
+  name     => 'nginx',
   provider => 'apt',
 }
 
 file_line { 'add_header':
-  path    => '/etc/nginx/sites-available/default',
-  line    => 'add_header X-Served-By $HOSTNAME;',
-  after   => 'server_name _',
+  path     => '/etc/nginx/sites-available/default',
+  line     => 'add_header X-Served-By $HOSTNAME;',
+  after    => 'server_name _;',
 }
 
 exec {'start':
-  command => 'sudo service nginx start',
+  command  => '/usr/bin/sudo service nginx restart',
 }
