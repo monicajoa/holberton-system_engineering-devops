@@ -15,7 +15,7 @@ if __name__ == "__main__":
                 url + "todos", params={"userId": u_user["id"]}).json()
             all_tasks = []
             for task in todos:
-                all_tasks.append({"username": u_user["name"],
+                all_tasks.append({"username": u_user["username"],
                                   "task": task["title"],
                                   "completed": task["completed"]})
             all_users[u_user["id"]] = all_tasks
